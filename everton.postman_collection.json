@@ -1,0 +1,904 @@
+{
+	"info": {
+		"_postman_id": "6af4abd9-3ace-49fa-b97c-d4262036e0e0",
+		"name": "Zup Bootcamp",
+		"description": "Api Youtube\n\nContact Support:\n Name: Everton Carlos\n Email: evertoncnsouza@gmail.com",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "usuarios",
+					"item": [
+						{
+							"name": "salvar-correto",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"admin\": \"<boolean>\",\n    \"id\": \"<integer>\",\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/usuarios",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Created",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"admin\": \"<boolean>\",\n    \"id\": \"<integer>\",\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/usuarios",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"usuarios"
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "autenticar",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/usuarios/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios",
+										"auth"
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "OK",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/usuarios/auth",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"usuarios",
+												"auth"
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "*/*"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "videos",
+					"item": [
+						{
+							"name": "{id}",
+							"item": [
+								{
+									"name": "savevideo",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"assunto\": \"<string>\",\n    \"descricao\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"nome\": \"<string>\",\n    \"url\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "updatevideo",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "PUT",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"assunto\": \"<string>\",\n    \"descricao\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"nome\": \"<string>\",\n    \"url\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "PUT",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "find",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": ""
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos?assunto=<string>&comments[0].comments=<string>&comments[0].comments=<string>&comments[0].id=<integer>&comments[0].id=<integer>&comments[0].likes=<boolean>&comments[0].likes=<boolean>&comments[0].video.assunto=<string>&comments[0].video.assunto=<string>&comments[0].video.descricao=<string>&comments[0].video.descricao=<string>&comments[0].video.id=<integer>&comments[0].video.id=<integer>&comments[0].video.nome=<string>&comments[0].video.nome=<string>&comments[0].video.url=<string>&comments[0].video.url=<string>&descricao=<string>&id=<integer>&nome=<string>&url=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											],
+											"query": [
+												{
+													"key": "assunto",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].comments",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].comments",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].id",
+													"value": "<integer>"
+												},
+												{
+													"key": "comments[0].id",
+													"value": "<integer>"
+												},
+												{
+													"key": "comments[0].likes",
+													"value": "<boolean>"
+												},
+												{
+													"key": "comments[0].likes",
+													"value": "<boolean>"
+												},
+												{
+													"key": "comments[0].video.assunto",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].video.assunto",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].video.descricao",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].video.descricao",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].video.id",
+													"value": "<integer>"
+												},
+												{
+													"key": "comments[0].video.id",
+													"value": "<integer>"
+												},
+												{
+													"key": "comments[0].video.nome",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].video.nome",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].video.url",
+													"value": "<string>"
+												},
+												{
+													"key": "comments[0].video.url",
+													"value": "<string>"
+												},
+												{
+													"key": "descricao",
+													"value": "<string>"
+												},
+												{
+													"key": "id",
+													"value": "<integer>"
+												},
+												{
+													"key": "nome",
+													"value": "<string>"
+												},
+												{
+													"key": "url",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "OK",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos?assunto=<string>&comments[0].comments=<string>&comments[0].comments=<string>&comments[0].id=<integer>&comments[0].id=<integer>&comments[0].likes=<boolean>&comments[0].likes=<boolean>&comments[0].video.assunto=<string>&comments[0].video.assunto=<string>&comments[0].video.descricao=<string>&comments[0].video.descricao=<string>&comments[0].video.id=<integer>&comments[0].video.id=<integer>&comments[0].video.nome=<string>&comments[0].video.nome=<string>&comments[0].video.url=<string>&comments[0].video.url=<string>&descricao=<string>&id=<integer>&nome=<string>&url=<string>",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos"
+													],
+													"query": [
+														{
+															"key": "assunto",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].comments",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].comments",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].id",
+															"value": "<integer>"
+														},
+														{
+															"key": "comments[0].id",
+															"value": "<integer>"
+														},
+														{
+															"key": "comments[0].likes",
+															"value": "<boolean>"
+														},
+														{
+															"key": "comments[0].likes",
+															"value": "<boolean>"
+														},
+														{
+															"key": "comments[0].video.assunto",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].video.assunto",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].video.descricao",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].video.descricao",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].video.id",
+															"value": "<integer>"
+														},
+														{
+															"key": "comments[0].video.id",
+															"value": "<integer>"
+														},
+														{
+															"key": "comments[0].video.nome",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].video.nome",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].video.url",
+															"value": "<string>"
+														},
+														{
+															"key": "comments[0].video.url",
+															"value": "<string>"
+														},
+														{
+															"key": "descricao",
+															"value": "<string>"
+														},
+														{
+															"key": "id",
+															"value": "<integer>"
+														},
+														{
+															"key": "nome",
+															"value": "<string>"
+														},
+														{
+															"key": "url",
+															"value": "<string>"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "delete",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "DELETE",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": ""
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/:id",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "<integer>",
+													"description": "(Required) id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "No Content",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/:id",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														":id"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "No Content",
+											"code": 204,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "savevideoagain",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"assunto\": \"<string>\",\n    \"descricao\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"nome\": \"<string>\",\n    \"url\": \"<string>\"\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/api/videos",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos"
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "savecomment",
+									"request": {
+										"auth": {
+											"type": "noauth"
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": ""
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"comments\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"likes\": \"<boolean>\",\n    \"video\": {\n        \"assunto\": \"<string>\",\n        \"descricao\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"nome\": \"<string>\",\n        \"url\": \"<string>\"\n    }\n}"
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/videos/:id/comments",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"videos",
+												":id",
+												"comments"
+											],
+											"variable": [
+												{
+													"key": "id"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Created",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"comments\": \"<string>\",\n    \"id\": \"<integer>\",\n    \"likes\": \"<boolean>\",\n    \"video\": {\n        \"assunto\": \"<string>\",\n        \"descricao\": \"<string>\",\n        \"id\": \"<integer>\",\n        \"nome\": \"<string>\",\n        \"url\": \"<string>\"\n    }\n}"
+												},
+												"url": {
+													"raw": "{{baseUrl}}/api/videos/:id/comments",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"api",
+														"videos",
+														":id",
+														"comments"
+													],
+													"variable": [
+														{
+															"key": "id"
+														}
+													]
+												}
+											},
+											"status": "Created",
+											"code": 201,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "*/*"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							],
+							"protocolProfileBehavior": {},
+							"_postman_isSubFolder": true
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "usuarios com erros",
+			"item": [
+				{
+					"name": "salvar-incorreto",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"admin\": \"<boolean>\",\n    \"id\": \"<integer>\",\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"admin\": \"<boolean>\",\n    \"id\": \"<integer>\",\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/usuarios",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "autenticar",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/usuarios/auth",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"usuarios",
+								"auth"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "OK",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"login\": \"<string>\",\n    \"senha\": \"<string>\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/usuarios/auth",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"usuarios",
+										"auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "*/*"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "//localhost:8080/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
